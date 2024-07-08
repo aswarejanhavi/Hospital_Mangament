@@ -1,0 +1,14 @@
+<!-- myapp/templates/inpatient_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inpatient Detail</title>
+</head>
+<body>
+    <h1>{{ inpatient.P_Name }}</h1>
+    <p>Age: {{ inpatient.P_Age }}</p>
+    <p>Room Number: {{ inpatient.room_number }}</p>
+    <p>Admission Date: {{ inpatient.admission_date }}</p>
+    <a href="{% url 'inpatient-list' %}">Back to list</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- myapp/templates/doctor_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Detail</title>
+    <link rel="stylesheet" href="{% static "style.css" %}}">
+</head>
+<body>
+    <h1>{{ doctor.Dr_Name }}</h1>
+    <p>Degree: {{ doctor.Dr_Degree }}</p>
+    <p>Specialization: {{ doctor.Dr_Specilization }}</p>
+    <a href="{% url 'doctor-list' %}">Back to list</a>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- myapp/templates/outpatient_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Outpatients List</title>
+</head>
+<body>
+    <h1>Outpatients</h1>
+    <ul>
+        {% for outpatient in outpatients %}
+        <li><a href="{% url 'outpatient-detail' outpatient.pk %}">{{ outpatient.P_Name }}</a> - Appointment: {{ outpatient.appointment_date }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

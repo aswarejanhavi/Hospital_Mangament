@@ -1,0 +1,15 @@
+<!-- myapp/templates/inpatient_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inpatients List</title>
+</head>
+<body>
+    <h1>Inpatients</h1>
+    <ul>
+        {% for inpatient in inpatients %}
+        <li><a href="{% url 'inpatient-detail' inpatient.pk %}">{{ inpatient.P_Name }}</a> - Room: {{ inpatient.room_number }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!-- myapp/templates/doctor_list.html -->
+{% comment %} <!DOCTYPE html> {% endcomment %}
+{% comment %} <html>
+<head>
+    <title>Doctors List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'HMS_App/style.css' %}">
+
+</head>
+<body>
+    <h1>Doctors</h1>
+    
+    <ul>
+        {% for doctor in doctors %}
+        <li><a href="{% url 'doctor-detail' doctor.pk %}">{{ doctor.Dr_Name }}</a> - {{ doctor.Dr_Specilization }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html> {% endcomment %}
+
+
+<!-- myapp/templates/doctor_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctors List</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Doctors</h1>
+    <ul>
+        {% for doctor in doctors %}
+        <li><a href="{% url 'doctor-detail' doctor.pk %}">{{ doctor.Dr_Name }}</a> - {{ doctor.Dr_Specilization }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!-- myapp/templates/outpatient_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Outpatient Detail</title>
+</head>
+<body>
+    <h1>{{ outpatient.P_Name }}</h1>
+    <p>Age: {{ outpatient.P_Age }}</p>
+    <p>Appointment Date: {{ outpatient.appointment_date }}</p>
+    <a href="{% url 'outpatient-list' %}">Back to list</a>
+</body>
+</html>
